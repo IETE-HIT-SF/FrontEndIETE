@@ -1,0 +1,1462 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxygen+Mono&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main__container {
+    width: 100%;
+    height: 100vh;
+    /* background: #1E1E1E; */
+    background: #131010;
+}
+
+.smain__container {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo__container {
+    width: 20%;
+    height: 80%;
+    padding: 15px;
+    border-radius: 0 30px 30px 0;
+    background: #1A1313;
+    box-shadow: 0px 4px 4px rgba(226, 226, 226, 0.1);
+}
+
+header .logo__container a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo__container a span {
+    color: #FFFFFF;
+    margin-left: 15px;
+    font-size: 1.2rem;
+}
+
+header nav {
+    width: 55%;
+    height: 80%;
+    border-radius: 30px 0px 0px 30px;
+    background: #1A1313;
+    box-shadow: 0px 4px 4px rgba(226, 226, 226, 0.1);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header nav ul {
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header nav ul li a {
+    color: #FFFFFF;
+    font-size: 1.1rem;
+}
+
+header nav img {
+    width: 15%;
+    /* height: 0%; */
+}
+
+
+/* =========== container designing starts ==================== */
+.container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    /* border: 1px solid red; */
+}
+
+
+.container .robo {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-end; */
+    align-items: center;
+    position: relative;
+    /* border: 1px solid orangered; */
+}
+
+.container .robo .robot {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    transition: 0.2s;
+    /* border: 1px solid orangered; */
+}
+
+.container .robo .robot .circle1 {
+    width: 65%;
+    transform: translateX(-56px);
+}
+
+.container .robo .robot .robot__svg {
+    width: 65%;
+    transform: translateX(-250px);
+    transition: 0.2s;
+}
+
+.container .robo .circle2 {
+    position: absolute;
+    width: 35px;
+    top: 5%;
+    left: 15%;
+}
+
+.container .robo .circle3 {
+    position: absolute;
+    width: 100px;
+    bottom: 0;
+    left: 30%;
+    transition: 0.2s;
+}
+
+.container .robo .signInOrUp {
+    color: #FFFFFF;
+    width: 80%;
+    position: absolute;
+    bottom: 6.5%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid wheat; */
+}
+
+.container .robo .signInOrUp .title {
+    font-size: 3rem;
+}
+
+.container .robo .signInOrUp .arrowForm {
+    width: 60%;
+}
+
+.container .robo .signInOrUp .registration__form {
+    font-size: 1.75rem;
+}
+
+@media screen and (max-width : 1000px) {
+    .container .robo .signInOrUp .title {
+        font-size: 2.75rem;
+    }
+
+    .container .robo .signInOrUp .registration__form {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width : 800px) {
+    .container .robo .signInOrUp .title {
+        font-size: 2.25rem;
+    }
+}
+
+
+.container .content {
+    width: 50%;
+    height: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    /* border: 1px solid white; */
+}
+
+.container .content .title {
+    width: fit-content;
+    color: #FFFFFF;
+    font-size: 5.5rem;
+    font-family: 'Bebas Neue', cursive;
+    border-bottom: 2px solid #FFFFFF;
+    text-shadow: 2px 2px 3px #f7f754bb;
+    margin-bottom: 0.4rem
+}
+
+.container .content .brief {
+    color: #FFFFFF;
+    font-family: 'Oxygen Mono', monospace;
+    margin-bottom: 0.5rem;
+}
+
+.container .content .arrow1 {
+    width: 30%;
+    transform: translate(150px, 35px);
+}
+
+.container .content .arrow2 {
+    width: 40%;
+    margin-bottom: 1rem;
+}
+
+.container .content .buttons {
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.container .content .buttons button {
+    outline: none;
+    border: none;
+    width: 20%;
+    padding: 1.2rem 0.75rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-right: 10px;
+    background: linear-gradient(180deg, #774DBC 0%, #331A28 100%);
+    border-radius: 5px;
+}
+
+.container .content .buttons .guest {
+    background: #D9D9D9;
+    color: rgba(0, 0, 0, 1);
+}
+
+.container .content .circle4 {
+    position: absolute;
+    width: 75px;
+    right: 20%;
+    bottom: 10%;
+}
+
+.container .sideDesign1 {
+    width: 25%;
+    position: absolute;
+    /* right: -185px; */
+    top: 0%;
+    right: -12.5%;
+}
+
+.container .sideDesign2 {
+    width: 25%;
+    position: absolute;
+    /* right: -205px; */
+    right: -15%;
+    bottom: 1%;
+}
+
+
+@media screen and (max-width : 1375px) {
+    .container .content .arrow1 {
+        transform: translate(170px, 30px);
+    }
+
+    .container .robo .circle3 {
+        width: 65px;
+        bottom: 0;
+        left: 30%;
+    }
+}
+
+@media screen and (max-width : 1300px) {
+    .container .robo .robot .circle1 {
+        width: 75%;
+    }
+
+    .container .robo .robot .robot__svg {
+        width: 75%;
+    }
+}
+
+
+@media screen and (max-width : 1200px) {
+    .container .content .buttons button {
+        width: 25%;
+    }
+
+    .container .content .arrow1 {
+        transform: translate(185px, 30px);
+    }
+
+    .container .sideDesign1 {
+        width: 30%;
+        right: -15%;
+    }
+
+    .container .sideDesign2 {
+        width: 30%;
+        right: -17.5%;
+        bottom: 5%;
+    }
+}
+
+@media screen and (max-width : 1100px) {
+    .container .robo .robot .circle1 {
+        width: 80%;
+    }
+
+    .container .robo .robot .robot__svg {
+        width: 80%;
+    }
+
+    .container .content .arrow1 {
+        transform: translate(195px, 30px);
+    }
+}
+
+@media screen and (max-width : 1000px) {
+    .container .robo .robot .circle1 {
+        width: 85%;
+    }
+
+    .container .robo .robot .robot__svg {
+        width: 85%;
+    }
+
+    .container .content .arrow1 {
+        transform: translate(205px, 27px);
+    }
+
+    .container .content .buttons button {
+        width: 30%;
+    }
+
+    .container .sideDesign1 {
+        width: 35%;
+        right: -17%;
+    }
+
+    .container .sideDesign2 {
+        width: 35%;
+        right: -20%;
+    }
+
+    .container .robo .circle3 {
+        width: 75px;
+        bottom: 7%;
+    }
+
+    .container .content .circle4 {
+        width: 60px;
+        right: 10%;
+        bottom: 4%;
+    }
+
+    .container .robo .signInOrUp {
+        bottom: 7.5%;
+    }
+}
+
+@media screen and (max-width : 950px) {
+    .container .robo .robot .circle1 {
+        width: 80%;
+    }
+
+    .container .robo .robot .robot__svg {
+        width: 80%;
+        transform: translateX(-200px);
+    }
+}
+
+@media screen and (max-width : 900px) {
+    .container .robo .title {
+        font-size: 2.5rem;
+    }
+
+    .container .robo .registration__form {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width : 850px) {
+    .container .robo .robot .circle1 {
+        width: 85%;
+    }
+
+    .container .robo .robot .robot__svg {
+        width: 85%;
+    }
+
+    .container .content .arrow1 {
+        width: 35%;
+        transform: translate(210px, 25px);
+    }
+
+    .container .content .buttons button {
+        width: 35%;
+    }
+
+    .container .robo .circle3 {
+        width: 65px;
+        bottom: 12.5%;
+    }
+
+    .container .content .circle4 {
+        position: absolute;
+        width: 40px;
+        right: 10%;
+        bottom: 4%;
+    }
+
+}
+
+
+/* =================== form-container designing ========================= */
+
+.form-container {
+    width: 60%;
+    /* width: 100%; */
+    /* height: 75%; */
+    height: 80%;
+    /* margin-top: 10%; */
+    /* margin-left: 37%; */
+    background: linear-gradient(90.27deg, #050618 -0.39%, #570444 82.8%);
+    /* border: 1px solid #FFFFFF; */
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.login {
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid black; */
+    padding: 2rem 0 1rem 2rem;
+}
+
+.registration {
+    width: 50%;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* border: 1px solid red; */
+}
+
+.login h3,
+.registration h3 {
+    font-family: spaceAge;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    margin-bottom: 1.5rem;
+}
+
+.login h3::first-letter,
+.registration h3::first-letter {
+    font-family: Bebas Neue;
+    font-size: 2.75rem;
+}
+
+.login form .input__fields label,
+.registration form .input__fields label {
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 0.1rem;
+    margin-left: 1rem;
+    font-family: spaceAge;
+}
+
+.login form .input__fields input,
+.registration form .input__fields input {
+    outline: none;
+    border: none;
+    width: 80%;
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 15px;
+    padding: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.registration form .input__fields input {
+    margin-bottom: 0.25rem;
+}
+
+form input[type="submit"],
+.registration form .first__view .next__view,
+.registration form .second__view button,
+.swapper .register__message button,
+.swapper .login__message button {
+    outline: none;
+    border: none;
+    width: 55%;
+    margin-top: 1.5rem;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(180deg, #7A4EC1 0%, #331A29 100%);
+    border-radius: 21.5px;
+    color: rgba(255, 255, 255, 1);
+    font-family: spaceAge;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+.registration form .first__view,
+.registration form .second__view {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.registration form .second__view .input__fields select {
+    outline: none;
+    border: none;
+    width: 70%;
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 15px;
+    padding: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.registration form .second__view .prev__view {
+    width: 100%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: rgba(194, 127, 47, 1);
+}
+
+
+.swapper {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: -0.25%;
+    background-color: white;
+    border-radius: 25px;
+    transform: scaleY(1.1);
+    background: url(https://c1.wallpaperflare.com/preview/680/943/635/virtual-reality-person-woman-lady.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background: black; */
+    display: flex;
+    align-items: flex-end;
+    /* transition: transform 0.5s, right 0.5s; */
+    transition: right 0.5s;
+}
+
+.swapper .register__message,
+.swapper .login__message {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.swapper .login__message {
+    height: 70%;
+    display: none;
+}
+
+.swapper .register__message h3,
+.swapper .login__message h3 {
+    font-family: 'Bebas Neue', cursive;
+    color: rgba(255, 255, 255, 1);
+    font-size: 30px;
+    letter-spacing: 0.25rem;
+}
+
+.swapper .register__message p,
+.swapper .login__message p {
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.swapper .register__message h3::first-letter,
+.swapper .login__message h3::first-letter {
+    font-size: 37px;
+}
+
+/* ========================== errors designing ============================= */
+.login .loginError {
+    /* color: orangered; */
+    color: rgb(244, 67, 97);
+    padding-left: 1rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.login__message .registrationError {
+    /* color: rgb(244, 67, 97); */
+    /* color: orangered; */
+    color: yellow;
+    padding-left: 1rem;
+    letter-spacing: 0.12rem;
+    margin-bottom: 0.75rem;
+}
+
+
+/* ===================================== designing for small screens =====================================
+======================================================================================================= */
+
+@media screen and (max-width : 1000px) and (orientation : portrait) {
+    .main__container {
+        display: none;
+    }
+
+    .smain__container {
+        width: 100%;
+        height: 100dvh;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        /* background: #131010; */
+        /* background: rgba(17, 2, 2, 1); */
+        background: rgba(255, 255, 255, 1);
+        /* border: 1px solid red; */
+    }
+
+    .smain__container header {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        background: rgba(17, 2, 2, 1);
+        /* border: 1px solid white; */
+    }
+
+    .smain__container header .slogo__container {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* border: 1px solid red; */
+    }
+
+    .smain__container header .slogo__container img {
+        object-fit: cover;
+        margin-top: 10px;
+        /* margin-top: auto; */
+    }
+
+    .smain__container header .hamburger {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 1rem;
+        /* border: 1px solid red; */
+    }
+
+    .smain__container header img {
+        object-fit: cover;
+    }
+
+    .smain__container .srobo {
+        width: 100%;
+        height: 65%;
+        background: rgba(17, 2, 2, 1);
+        border-radius: 0px 0px 35px 35px;
+        overflow: hidden;
+        transition: 0.3s ease-in;
+
+        position: relative;
+        /* border: 1px solid blue; */
+    }
+
+    .smain__container .srobo .srobot {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        /* align-items: flex-end; */
+        position: relative;
+        /* border: 1px solid yellow; */
+    }
+
+    .srobo .srobot .scircle1 {
+        width: 45%;
+        transform: translateX(-20px);
+        z-index: 2;
+    }
+
+    .srobo .srobot .srobot__svg {
+        width: 45%;
+        transform: translate(-165px, 15px);
+        z-index: 2;
+    }
+
+    .srobo .srobot .scircle2 {
+        position: absolute;
+        width: 25px;
+        left: 15%;
+        top: 7%;
+    }
+
+    .srobo .srobot .scircle3 {
+        position: absolute;
+        width: 60px;
+        right: 10%;
+        top: 20%;
+    }
+
+    .srobo .srobot .scircle4 {
+        position: absolute;
+        width: 100px;
+        right: 5%;
+        bottom: -12%;
+    }
+
+    .smain__container .sname {
+        width: 100%;
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .smain__container .sname .ietes {
+        width: fit-content;
+        font-size: 6rem;
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 3px;
+        color: rgba(255, 255, 255, 1);
+        border-bottom: 2px solid rgba(255, 255, 255, 1);
+    }
+
+    .smain__container .sname .sarrow3 {
+        /* width: 25%; */
+        width: 15%;
+        transform: translateX(80px);
+    }
+
+    .smain__container .scontent {
+        width: 100%;
+        /* height: 23%; */
+        height: 25%;   /* ================ Now's change ================ */
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .smain__container .scontent .sbrief {
+        font-size: 1rem;
+        font-family: 'Oxygen Mono', monospace;
+        color: rgba(0, 0, 0, 1);
+    }
+
+    .smain__container .scontent .sbuttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .smain__container .scontent .sbuttons button {
+        outline: none;
+        border: none;
+        width: 35%;
+        padding: 1rem;
+        color: #FFFFFF;
+        cursor: pointer;
+        margin-right: 10px;
+        background: linear-gradient(180deg, #774DBC 0%, #331A28 100%);
+        border-radius: 5px;
+    }
+
+
+    /* navbar designing for small devices */
+
+    .smain__container .navBar {
+        width: 40%;
+        height: 95%;
+        position: fixed;
+        /* right: 2%; */
+        right: -12.5%;
+        top: 2.5%;
+        z-index: 25;
+        border-radius: 12.5px;
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        /* background: red; */
+        display: none;
+
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+    }
+
+    .smain__container .navBar .close {
+        width: 100%;
+        height: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 20px;
+        margin-bottom: 20px;
+        /* background: green; */
+    }
+
+    .smain__container .navBar .close .fas {
+        font-size: 2rem;
+        color: orangered;
+    }
+
+    .smain__container .navBar li {
+        margin-bottom: 1.5rem;
+    }
+
+    .smain__container .navBar li a {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+
+
+
+/* small devices width between 700px to 925px in landcape mode */
+/* @media screen and (max-width : 900px) and (orientation : landscape) {   isme pura sho kaam kar raha*/
+@media screen and (max-width : 925px) and (orientation : landscape) {
+    .main__container {
+        display: none;
+    }
+
+    .smain__container {
+        width: 100%;
+        height: max-content;
+        /*=============================================*/
+        display: block;
+        position: relative;
+        overflow: hidden;
+        /* background: #131010; */
+        /* background: rgba(17, 2, 2, 1); */
+        background: rgba(255, 255, 255, 1);
+        /* border: 1px solid red; */
+    }
+
+    .smain__container header {
+        width: 100%;
+        /* height: 10%; */
+        height: 75px;
+        /*=============================================*/
+        display: flex;
+        align-items: center;
+        background: rgba(17, 2, 2, 1);
+        /* border: 1px solid white; */
+    }
+
+    .smain__container header .slogo__container {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* border: 1px solid red; */
+    }
+
+    .smain__container header .slogo__container img {
+        object-fit: cover;
+        margin-top: 10px;
+        /* margin-top: auto; */
+    }
+
+    .smain__container header .hamburger {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 1rem;
+        /* border: 1px solid red; */
+    }
+
+    .smain__container header img {
+        object-fit: cover;
+    }
+
+    .smain__container .srobo {
+        width: 100%;
+        /* height: 65%; */
+        height: 400px;
+        /*=====================================================*/
+        background: rgba(17, 2, 2, 1);
+        border-radius: 0px 0px 35px 35px;
+        overflow: hidden;
+        transition: 0.3s ease-in;
+        /* border: 1px solid blue; */
+
+        display: flex;
+        /*=====================================================*/
+    }
+
+    .smain__container .srobo .srobot {
+        /* width: 100%; */
+        width: 50%;
+        /*=====================================================*/
+        /* height: 70%; */
+        height: 100%;
+        /*====================================================*/
+        display: flex;
+        align-items: center;
+        /* align-items: flex-end; */
+        position: relative;
+        /* border: 1px solid yellow; */
+    }
+
+    .srobo .srobot .scircle1 {
+        /* width: 45%; */
+        width: 50%;
+        /*=====================================================*/
+        transform: translateX(-20px);
+        z-index: 2;
+    }
+
+    .srobo .srobot .srobot__svg {
+        /* width: 45%; */
+        width: 50%;
+        /*=====================================================*/
+        transform: translate(-165px, 10px);
+        z-index: 2;
+    }
+
+    .srobo .srobot .scircle2 {
+        position: absolute;
+        width: 25px;
+        left: 15%;
+        top: 7%;
+        display: none;
+        /*=====================================================*/
+    }
+
+    .srobo .srobot .scircle3 {
+        position: absolute;
+        width: 60px;
+        right: 5%;
+        /*=====================================================*/
+        top: 20%;
+    }
+
+    .srobo .srobot .scircle4 {
+        position: absolute;
+        width: 50px;
+        /* right: 5%;      */
+        right: -75%;
+        /*=====================================================*/
+        /* bottom: -12%; */
+        bottom: 10%;
+        /*=====================================================*/
+    }
+
+    .smain__container .sname {
+        /* width: 100%; */
+        width: 50%;
+        /*=====================================================*/
+        /* height: 25%; */
+        height: 100%;
+        /*=====================================================*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 2;
+    }
+
+    .smain__container .sname .ietes {
+        width: fit-content;
+        /* font-size: 6rem; */
+        font-size: 5rem;
+        /* ===================================================== */
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 3px;
+        color: rgba(255, 255, 255, 1);
+        border-bottom: 2px solid rgba(255, 255, 255, 1);
+        transform: translateY(-45px);
+        /*=====================================================*/
+    }
+
+    .smain__container .sname .sarrow3 {
+        /* width: 25%; */
+        /* width: 15%; */
+        width: 25%;
+        /*=====================================================*/
+        /* transform: translateX(80px); */
+        transform: translate(100px, -45px);
+        /*=====================================================*/
+    }
+
+    .smain__container .scontent {
+        width: 100%;
+        /* height: 23%; */
+        height: 200px;
+        /*=====================================================*/
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .smain__container .scontent .sbrief {
+        font-size: 1rem;
+        font-family: 'Oxygen Mono', monospace;
+        color: rgba(0, 0, 0, 1);
+    }
+
+    .smain__container .scontent .sbuttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .smain__container .scontent .sbuttons button {
+        outline: none;
+        border: none;
+        width: 35%;
+        padding: 0.75rem;
+        /*========================================================*/
+        color: #FFFFFF;
+        cursor: pointer;
+        margin-right: 10px;
+        background: linear-gradient(180deg, #774DBC 0%, #331A28 100%);
+        border-radius: 5px;
+    }
+
+
+    /* navbar designing for small devices */
+
+    .smain__container .navBar {
+        width: 40%;
+        /* height: 95%; */
+        height: max-content;
+        /*=====================================================*/
+        position: fixed;
+        /* right: 2%; */
+        right: -12.5%;
+        top: 2.5%;
+        z-index: 25;
+        border-radius: 12.5px;
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        /* background: red; */
+        display: none;
+
+        overflow: auto;
+        /*==========================================================*/
+
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+    }
+
+    .smain__container .navBar .close {
+        width: 100%;
+        height: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 20px;
+        margin-bottom: 20px;
+        /* background: green; */
+    }
+
+    .smain__container .navBar .close .fas {
+        font-size: 2rem;
+        color: orangered;
+    }
+
+    .smain__container .navBar li {
+        margin-bottom: 1.5rem;
+    }
+
+    .smain__container .navBar li a {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+/*  ====================  for small device(width less than 700px) in landscape mode ===================== */
+
+@media screen and (max-width : 700px) and (orientation : landscape) {
+    .smain__container .srobo {
+        height: 350px;
+    }
+
+    .srobo .srobot .scircle1 {
+        /* width: 45%; */
+        width: 50%;
+        /*=====================================================*/
+        transform: translateX(-20px);
+        z-index: 2;
+    }
+
+    .srobo .srobot .srobot__svg {
+        /* width: 45%; */
+        width: 60%;
+        /*=====================================================*/
+        /* transform: translate(-165px, 15px); */
+        transform: translate(-100px, 15px);
+        z-index: 2;
+    }
+
+    .srobo .srobot .scircle3 {
+        width: 35px;
+        /*=====================================================*/
+    }
+
+    .srobo .srobot .scircle4 {
+        width: 45px;
+        right: -75%;
+        bottom: 15%;
+    }
+
+    .smain__container .sname .ietes {
+        font-size: 3rem;
+    }
+
+    .smain__container .sname .sarrow3 {
+        width: 25%;
+        transform: translate(50px, -45px);
+    }
+}
+
+
+
+/*  ====================  for small device in portrait mode  ===================== */
+@media screen and (max-width : 550px) {
+    .smain__container header {
+        height: 12%;
+    }
+
+    .smain__container .navBar {
+        width: 50%;
+    }
+
+    .smain__container .navBar .close .fas {
+        font-size: 1.5rem;
+    }
+
+    .smain__container .navBar li a {
+        font-size: 0.8rem;
+    }
+
+    .smain__container .srobo {
+        height: 55%;
+    }
+
+    .srobo .srobot .scircle1 {
+        /* width: 60%; initial*/
+        /* width: 55%; */
+        width: 52.5%;
+        transform: translateX(-65px);
+    }
+
+    .srobo .srobot .srobot__svg {
+        /* width: 55%; initial*/
+        /* width: 50%; */
+        width: 47.5%;
+        /* transform: translateX(-165px); */
+        transform: translate(-165px, 0px);
+    }
+
+    .srobo .srobot .scircle2 {
+        display: none;
+    }
+
+    .srobo .srobot .scircle3 {
+        /* width: 25px; */
+        width: 30px;
+    }
+
+    .srobo .srobot .scircle4 {
+        width: 75px;
+        bottom: 15%;
+        right: 12%;
+    }
+
+    .smain__container .scontent {
+        height: 33%;
+        /* border: 1px solid teal; */
+    }
+
+    .srobo .sname .ietes {
+        font-size: 3rem;
+    }
+
+    .srobo .sname .sarrow3 {
+        transform: translateX(65px);
+    }
+
+    .smain__container .scontent .sbrief {
+        font-size: 0.8rem;
+    }
+
+    .smain__container .scontent .sbuttons button {
+        padding: 5px;
+    }
+}
+
+/* @media screen and (max-width : 550px) and (orientation : portrait) {
+    .main__container{
+        height: 1500px;
+    }
+} */
+
+
+
+/* =========================== form related css code ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400&family=Oxygen+Mono&family=Poppins:wght@400;500;600&display=swap');
+
+/* body {
+    width: 100%;
+    height: 100vh;
+    background: #131010;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+} */
+
+.slogin__form,
+.sregister__form {
+    width: 33%;
+    /* height: 75vh; */
+    height: 75%;
+    /* point to look on */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid white;
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 20;
+}
+
+.slogin__form .sclose_form,
+.sregister__form .sclose_form {
+    background-color: #7f5a83;
+    /* background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%); */
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    padding: 10px 15px;
+    border-radius: 0 0 0 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: rgba(255, 255, 255, 1);
+}
+
+.slogin__form .smessage,
+.sregister__form .smessage {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.slogin__form .swelcome,
+.sregister__form .sjoin {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 1);
+    width: fit-content;
+    border-bottom: 1.3px solid rgba(255, 255, 255, 1);
+}
+
+.slogin__form .serror,
+.sregister__form .serror {
+    /* color: rgb(245, 90, 34); */
+    color: rgb(216, 48, 174);
+}
+
+.slogin__form form {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* border: 1px solid red; */
+}
+
+.slogin__form form .sinput_fields {
+    width: 65%;
+    margin-bottom: 20px;
+}
+
+form .sinput_fields label {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+}
+
+form .sinput_fields input,
+form .sinput_fields select {
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+    /* border: none; */
+    border-radius: 7.5px;
+    background: transparent;
+    /* color: yellow; */
+    /* color: orange; */
+    color: #f7238a;
+}
+
+form input[type="submit"] {
+    width: 30%;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    /* background: transparent; */
+    color: black;
+    cursor: pointer;
+}
+
+.slogin__form .sbuttons {
+    width: 75%;
+    height: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: start; */  
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.slogin__form .sbuttons button {
+    width: 45%;
+    outline: none;
+    padding: 0.4rem;
+    border-radius: 5px;
+    background: transparent;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.sregister__form form {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.sregister__form form .sfirst__view,
+.sregister__form form .ssecond__view {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+}
+
+.sregister__form form .ssecond__view .register_btns {
+    width: 75%;
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+
+.sregister__form form .sfirst__view .next,
+.sregister__form form .ssecond__view .back,
+.sregister__form form .ssecond__view .register {
+    /* width: 35%; */
+    width: fit-content;
+    padding: 0.55rem;
+    background: transparent;
+    color: rgba(255, 255, 255, 1);
+    box-shadow: -0.2px -0.2px 0.1px 1px rgba(255, 255, 255, 0.192);
+}
+
+.sregister__form form .ssecond__view .back {
+    margin-right: 15px;
+}
+
+.sregister__form .slogin_router {
+    width: fit-content;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    font-weight: 300;
+    margin: 0px auto;
+}
+
+.sregister__form .slogin_router:hover {
+    color: aquamarine;
+}
+
+
+/* @media screen and (max-width : 650px) {
+    .slogin__form {
+        width: 90%;
+    }
+
+    .slogin__form form .sinput_fields {
+        width: 100%;
+    }
+} */
+
+
+/* @media screen and (max-width : 600px) {
+    .sregister__form {
+        width: 90%;
+    }
+
+    .sregister__form form .sfirst__view,
+    .sregister__form form .ssecond__view {
+        width: 100%;
+    }
+} */
+

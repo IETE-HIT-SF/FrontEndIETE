@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETE HIT SF</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- <script src="finallanding.js" defer></script> -->
+</head>
+
+<body onselectstart="return false">
+    <div class="main__container">
+        <header>
+            <div class="logo__container">
+                <a href="">
+                    <img src="/svg/logo.svg" alt="logo" />
+                    <span> IETE HIT SF </span>
+                </a>
+            </div>
+
+            <nav>
+                <ul>
+                    <li> <a href=""> Home </a> </li>
+                    <li> <a href=""> About </a> </li>
+                    <li> <a href=""> Blog </a> </li>
+                    <li> <a href=""> Contact </a> </li>
+                </ul>
+                <img src="/svg/nav.svg" alt="" class="nav-svg" />
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="robo">
+                <div class="robot">
+                    <img src="/svg/circle.svg" alt="circle1" class="circle1">
+                    <img src="/svg/robot.svg" alt="robo" class="robot__svg">
+                </div>
+                <img src="/svg/circle.svg" alt="circle2" class="circle2">
+                <img src="/svg/circle.svg" alt="circle3" class="circle3">
+
+                <div class="signInOrUp" style="display: none;">
+                    <p class="title"> IETE HIT SF </p>
+                    <img src="/svg/arrow2.svg" alt="arrowForm" class="arrowForm" />
+                    <p class="registration__form"> REGISTRATION FORM </p>
+                </div>
+            </div>
+            <div class="content">
+                <img src="/svg/arrow1.svg" alt=">>>" class="arrow1" />
+                <p class="title"> IETE HIT SF </p>
+                <p class="brief"> Welcome to our site! Stay ahead of the curve with the updates and insights of
+                    cutting-edge technology . Join us on our journey to explore the future of technology and be a
+                    part of “IETE HIT SF Family” </p>
+                <img src="/svg/arrow2.svg" alt="arrow2" class="arrow2" />
+                <div class="buttons">
+                    <button onclick="joinUs()"> Join Us </button>
+                    <button class="guest" onclick="guest()"> Guest Visitor </button>
+                </div>
+
+                <img src="/svg/circle.svg" alt="circle4" class="circle4">
+            </div>
+
+
+
+
+
+
+            <!-- ===================== code for registration/ login form ===================== -->
+            <div class="form-container" style="display: none;"> <!-- style="overflow: hidden;" -->
+                <div class="swapper">
+                    <div class="register__message">
+                        <h3> NEW HERE ? </h3>
+                        <p> Sign up and discover great amount of new opportunities! </p>
+                        <button class="signUp" onclick="signUpRouter()"> Sign Up </button>
+                    </div>
+                    <div class="login__message">
+                        <!-- <p class="error"> Name Can't Be Empty </p> -->
+                        <p class="registrationError"> Password must contain one uppercase, lowercase and symbols
+                            ('$' or '@')
+                        </p>
+                        <h3> ALREADY A MEMBER ? </h3>
+                        <p> Login up and track your growth! </p>
+                        <button class="signIn" onclick="signInRouter()"> Sign In </button>
+                    </div>
+                </div>
+                <div class="login">
+                    <h3> WELCOME BACK </h3>
+                    <p class="loginError"> No Such User </p>
+                    <form action="">
+                        <div class="input__fields email">
+                            <label for="email"> EMAIL </label> <br />
+                            <input type="email" />
+                        </div>
+                        <div class="input__fields password">
+                            <label for="password"> PASSWORD </label> <br />
+                            <input type="password" />
+                        </div>
+                        <input type="submit" value="LOG IN >>>>">
+                    </form>
+                </div>
+                <div class="registration">
+                    <h3> JOIN US </h3>
+                    <form action="#" onsubmit="registerUser(event)">
+                        <div class="first__view">
+                            <div class="input__fields name">
+                                <label for="name"> Name </label> <br />
+                                <input type="text" name="name" id="name" />
+                            </div>
+                            <div class="input__fields email">
+                                <label for="email"> EMAIL </label> <br />
+                                <input type="email" name="email" id="email" />
+                            </div>
+                            <div class="input__fields password">
+                                <label for="password"> PASSWORD </label> <br />
+                                <input type="password" name="password" id="password" />
+                            </div>
+                            <div class="input__fields password">
+                                <label for="password"> CONFIRM PASSWORD </label> <br />
+                                <input type="password" name="cnfpwd" id="cnfpwd" />
+                            </div>
+                            <a class="next__view" onclick="goToSecondView()"> Next >>> </a>
+                        </div>
+                        <div class="second__view" style="display: none;">
+                            <div class="input__fields college">
+                                <label for="college"> COLLEGE </label> <br />
+                                <input type="text" name="college" id="college" />
+                            </div>
+                            <div class="input__fields department">
+                                <label for="email"> DEPARTMENT </label> <br />
+                                <select id="dept" name="dept" onmousedown="if(this.options.length>3){this.size=3;}"
+                                    onchange='this.size=0;' onblur="this.size=0;">
+                                    <option> ECE </option>
+                                    <option> CSE </option>
+                                    <option> CSE-AIML </option>
+                                    <option> CSE-CS </option>
+                                    <option> CSE-DS </option>
+                                    <option> IT </option>
+                                    <option> EE </option>
+                                    <option> EIE </option>
+                                    <option> CIVIL </option>
+                                    <option> MECHANICAL </option>
+                                </select>
+                            </div>
+                            <div class="input__fields number">
+                                <label for="number"> CONTACT NUMBER </label> <br />
+                                <input type="number" name="contact" id="contact" />
+                            </div>
+                            <a class="prev__view" onclick="goToFirstView()"> &#x3c;&#x3c;&#x3c; BACK </a><br />
+                            <button> REGISTER </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <img src="/svg/sideone.svg" alt="sideDesign" class="sideDesign1" />
+            <img src="/svg/sideone.svg" alt="sideDesign" class="sideDesign2" />
+        </div>
+
+    </div>
+
+
+
+    <!-- ===================================== code for small screens ===================================== -->
+
+    <div class="smain__container">
+        <header>
+            <div class="slogo__container">
+                <img src="/svg/smalldevlogo.svg" alt="logo" />
+            </div>
+            <div class="hamburger">
+                <img src="/svg/hamburger.svg" alt="hamburger" class="hamburger_image" />
+            </div>
+        </header>
+
+        <div class="navBar">
+            <div class="close">
+                <!-- <i class="fa-solid fa-xmark"></i> -->
+                <i class="fas fa-times"></i>
+            </div>
+            <ul>
+                <li> <a href="#"> Home </a> </li>
+                <li> <a href="#"> About </a> </li>
+                <li> <a href="#"> Blog </a> </li>
+                <li> <a href="#"> Contact </a> </li>
+                <li> <a href="#"> Login </a> </li>
+            </ul>
+        </div>
+
+        <div class="srobo">
+            <div class="srobot">
+                <img src="/svg/circle.svg" alt="circle1" class="scircle1" />
+                <img src="/svg/robot.svg" alt="robot" class="srobot__svg" />
+                <img src="/svg/circle.svg" alt="circle2" class="scircle2" />
+                <img src="/svg/circle.svg" alt="circle2" class="scircle3" />
+                <img src="/svg/circle.svg" alt="circle3" class="scircle4" />
+            </div>
+            <div class="sname">
+                <img src="/svg/arrow3.svg" alt="arrow3" class="sarrow3" />
+                <p class="ietes"> IETE HIT SF </p>
+            </div>
+
+
+            <!-- =========================== form related html code goes here ====================== -->
+            <div class="sform_container" style="display: none;">
+                <div class="slogin__form">
+                    <div class="sclose_form"> X </div>
+                    <div class="smessage">
+                        <p class="swelcome"> Welcome </p>
+                        <p class="serror"> Please Verify Your Email To Login </p>
+                    </div>
+                    <form action="">
+                        <div class="sinput_fields">
+                            <label for="email"> Email </label><br />
+                            <input type="email" id="email" />
+                        </div>
+                        <div class="sinput_fields">
+                            <label for="password"> Password </label><br />
+                            <input type="password" id="password" />
+                        </div>
+
+                        <input type="submit" value="LogIn">
+                    </form>
+                    <div class="sbuttons">
+                        <button>Verify Email</button>
+                        <button onclick="sregister_router()">Register</button>
+                    </div>
+                </div>
+                <div class="sregister__form" style="display: none;">
+                    <div class="sclose_form"> X </div>
+                    <div class="smessage">
+                        <p class="sjoin"> Join US </p>
+                        <!-- <p class="serror"> Please Verify Your Email To Login </p> -->
+                        <p class="serror"> Yaha pe errors dikhega </p>
+                    </div>
+
+                    <form action="">
+                        <div class="sfirst__view">
+                            <div class="sinput_fields">
+                                <label for="name"> Name </label><br />
+                                <input type="name" id="name" />
+                            </div>
+                            <div class="sinput_fields">
+                                <label for="email"> Email </label><br />
+                                <input type="email" id="email" />
+                            </div>
+                            <div class="sinput_fields">
+                                <label for="password"> Password </label><br />
+                                <input type="password" id="password" />
+                            </div>
+                            <div class="sinput_fields">
+                                <label for="password"> Confirm Password </label><br />
+                                <input type="password" id="password" />
+                            </div>
+                            <a class="next"> Next --> </a>
+                        </div>
+                        <div class="ssecond__view" style="display: none;">
+                            <div class="sinput_fields">
+                                <label for="college"> College </label><br />
+                                <input type="text" id="college" />
+                            </div>
+                            <div class="sinput_fields">
+                                <label for="Department"> Department </label><br />
+                                <select id="department">
+                                    <option> 1 </option>
+                                    <option> 2 </option>
+                                    <option> 3 </option>
+                                    <option> 4 </option>
+                                    <option> 5 </option>
+                                    <option> 6 </option>
+                                    <option> 7 </option>
+                                </select>
+                            </div>
+                            <div class="sinput_fields">
+                                <label for="contact"> Contact </label><br />
+                                <input type="number" id="contact" />
+                            </div>
+                            <div class="register_btns">
+                                <a class="back"> <-- Back </a>
+                                <a class="register"> Register </a>
+                            </div>
+                            <p class="slogin_router"> Already a member ? Log In </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="scontent">
+            <p class="sbrief"> Welcome to our site! Stay ahead of the curve with the updates and insights of
+                cutting-edge technology . Join us on our journey to explore the future of technology and be a part of “
+                IETE HIT SF Family ” </p>
+            <img src="svg/arrow4.svg" alt="sarrow4" class="sarrow4" />
+            <div class="sbuttons">
+                <button onclick="smallDevjoinUS()"> Join Us </button>
+                <button> Guest Visitor </button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        // navBar for small devices related codes
+        let hamburger_image = document.querySelector(".hamburger_image");
+        let navBar = document.querySelector(".smain__container .navBar");
+        let navBar_close = document.querySelector(".smain__container .navBar .close .fas");
+        hamburger_image.addEventListener("click", () => {
+            hamburger_image.style.display = "none"
+            navBar.style.display = "flex";
+            navBar.style.right = '2%'
+        })
+        navBar_close.addEventListener("click", () => {
+            hamburger_image.style.display = "block"
+            navBar.style.display = "none";
+            navBar.style.right = '-12.5%'
+        })
+
+
+        // smallDevjoinUS button clicked related functionality 
+        let scontent = document.querySelector(".smain__container .scontent");
+        let srobo = document.querySelector(".srobo");
+        let srobot = document.querySelector(".srobo .srobot");
+        let robot__svg = document.querySelector(".srobo .srobot .srobot__svg");
+        let sname = document.querySelector(".srobo .sname");
+        let sform_container = document.querySelector(".srobo .sform_container");
+        let slogin__form = document.querySelector(".srobo .sform_container .slogin__form");
+        let sregister__form = document.querySelector(".srobo .sform_container .sregister__form");
+        let sfirst__view = document.querySelector(".srobo .sform_container .sregister__form form .sfirst__view");
+        let sfirst__view_next = document.querySelector(".srobo .sform_container .sregister__form form .sfirst__view .next");
+        let ssecond__view = document.querySelector(".srobo .sform_container .sregister__form form .ssecond__view");
+        let ssecond__view_back = document.querySelector(".srobo .sform_container .sregister__form form .ssecond__view .back");
+        let slogin_router = document.querySelector(".srobo .sform_container .sregister__form form .ssecond__view .slogin_router");
+        let sclose_form = document.querySelectorAll(".sclose_form");
+
+
+        function smallDevjoinUS() {
+            if (screen.width < 1000 && screen.width < screen.height) {
+                srobo.style.height = "90%";
+            }
+
+            if (screen.width < 925 && screen.width > 700  && screen.width > screen.height) {
+                srobo.style.height = "600px";
+                slogin__form.style.width = "55%";
+                sregister__form.style.width = "55%"
+            }
+
+            if (screen.width < 700 && screen.width > 550  && screen.width > screen.height) {
+                srobo.style.height = "550px";
+                slogin__form.style.width = "50%";
+                sregister__form.style.width = "50%"
+            }
+
+            if(screen.width < 550 && screen.width < screen.height){
+                srobo.style.height = "88%";
+                slogin__form.style.width = "90%";
+                sregister__form.style.width = "90%"
+            }
+            // if (screen.width < screen.height) {
+            //     srobo.style.height = "88%";
+            // } else {
+            //     srobo.style.height = "600px";
+            //     slogin__form.style.width = "50%";
+            //     sregister__form.style.width = "50%"
+            // }
+
+            srobo.style.borderRadius = 0;
+            sname.style.display = "none";
+            robot__svg.style.display = "none";
+            scontent.style.display = "none";
+            sform_container.style.display = "flex";
+        }
+
+        /* window resize event so that if form is opened and user changes orientation (i.e. portrait to 
+        landscape or vice-versa) than smallDevjoinUS() function gets called) to adjust forms dimension */
+        // addEventListener("resize", (event) => {
+        //     const sformContainerStyle = getComputedStyle(sform_container);
+        //     if(sformContainerStyle.display === "flex"){
+        //         smallDevjoinUS();
+        //     }
+        // });
+
+        addEventListener("resize", (event) => {
+            const sformContainerStyle = getComputedStyle(sform_container);
+            if(sformContainerStyle.getPropertyValue("display") === "flex"){
+                smallDevjoinUS();
+            }
+        });
+
+        function sregister_router() {
+            slogin__form.style.display = "none";
+            sregister__form.style.display = "flex";
+        }
+
+        sfirst__view_next.addEventListener("click", () => {
+            sfirst__view.style.display = "none";
+            ssecond__view.style.display = "flex";
+        });
+        ssecond__view_back.addEventListener("click", () => {
+            sfirst__view.style.display = "flex";
+            ssecond__view.style.display = "none";
+        });
+
+        slogin_router.addEventListener("click", () => {
+            slogin__form.style.display = "flex";
+            sregister__form.style.display = "none";
+        });
+
+        sclose_form.forEach(sclose => {
+            sclose.addEventListener("click", () => {
+                if (screen.width < screen.height) {
+                    srobo.style.height = "55%";
+                } else {
+                    srobo.style.height = "400px";
+                }
+
+                srobo.style.borderRadius = '0px 0px 35px 35px';
+                sname.style.display = "flex";
+                robot__svg.style.display = "block";
+                scontent.style.display = "flex";
+                sform_container.style.display = "none";
+            })
+        })
+    </script>
+</body>
+
+</html>
